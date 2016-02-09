@@ -1,0 +1,112 @@
+create table Albero
+(
+Id int identity,
+Nome varchar(50) unique,
+Tipo varchar(50),
+Split int,
+Depth int,
+CONSTRAINT [Albero_pk] PRIMARY KEY CLUSTERED
+(
+	[Id] ASC
+)
+
+)
+
+
+
+
+
+
+
+create table Edge
+(
+EdgeUid int identity,
+Valore int,
+IdAlbero int,
+CONSTRAINT [Edge_pk] PRIMARY KEY CLUSTERED 
+(
+	[EdgeUid] ASC
+)
+
+)
+
+
+ALTER TABLE Edge  WITH CHECK ADD  CONSTRAINT [edge_to_albero] FOREIGN KEY([IdAlbero])
+REFERENCES [Albero] ([Id])
+
+
+
+
+create table Vertex
+(
+VertexUid int identity,
+Name varchar(100),
+ArcoEntrante int,
+IdAlbero int,
+CONSTRAINT [Vertex_pk] PRIMARY KEY CLUSTERED 
+(
+	[VertexUid] ASC
+)
+
+)
+
+
+
+ALTER TABLE Vertex  WITH CHECK ADD  CONSTRAINT [vertex_to_albero] FOREIGN KEY([IdAlbero])
+REFERENCES [Albero] ([Id])
+
+ALTER TABLE Vertex  WITH CHECK ADD  CONSTRAINT [vertex_to_edge] FOREIGN KEY([ArcoEntrante])
+REFERENCES [Edge] ([EdgeUid])
+
+
+create table AttrDef
+(
+	AttrDefUid int identity,
+	Name varchar(50),
+	NomeAlbero varchar(50),
+
+CONSTRAINT [AttrDef_pk] PRIMARY KEY CLUSTERED 
+(
+	[AttrDefUid] ASC
+)
+)
+
+
+ALTER TABLE AttrDef  WITH CHECK ADD  CONSTRAINT [Albero_to_AttrDef] FOREIGN KEY([NomeAlbero])
+REFERENCES [Albero] ([Nome]) 
+
+
+create table VertexAttrUsage
+(
+	VertexAttrUsageUid int identity,
+	ObjectVUid int,
+	AttrDefUid int,
+	Value varchar(1000),
+CONSTRAINT [VertexAttrUsage _pk] PRIMARY KEY CLUSTERED 
+(
+	[VertexAttrUsageUid] ASC
+)
+
+)
+
+
+ALTER TABLE VertexAttrUsage  WITH CHECK ADD  CONSTRAINT [vertex_attr_usage to vertex] FOREIGN KEY([ObjectVUid])
+REFERENCES [Vertex] ([VertexUid])
+
+
+
+create table EdgeAttrUsage
+(
+	EdgeAttrUsageUid int identity,
+	ObjectEUid int,
+	AttrDefUid int,
+	Value varchar(1000),
+CONSTRAINT [EdgeAttrUsage _pk] PRIMARY KEY CLUSTERED 
+(
+	[EdgeAttrUsageUid] ASC
+)
+
+)
+
+ALTER TABLE EdgeAttrUsage  WITH CHECK ADD  CONSTRAINT [edge_attr_usage to edge] FOREIGN KEY([ObjectEUid])
+REFERENCES [Edge] ([EdgeUid])

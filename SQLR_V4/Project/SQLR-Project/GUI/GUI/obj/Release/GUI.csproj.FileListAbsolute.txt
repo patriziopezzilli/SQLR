@@ -1,0 +1,14 @@
+C:\Users\Riccardo\Documents\Visual Studio 2015\Projects\GUI\GUI\bin\Release\GUI.exe.config
+C:\Users\Riccardo\Documents\Visual Studio 2015\Projects\GUI\GUI\bin\Release\GUI.exe.manifest
+C:\Users\Riccardo\Documents\Visual Studio 2015\Projects\GUI\GUI\bin\Release\GUI.application
+C:\Users\Riccardo\Documents\Visual Studio 2015\Projects\GUI\GUI\bin\Release\GUI.exe
+C:\Users\Riccardo\Documents\Visual Studio 2015\Projects\GUI\GUI\bin\Release\GUI.pdb
+C:\Users\Riccardo\Documents\Visual Studio 2015\Projects\GUI\GUI\obj\Release\GUI.Creazione_albero.resources
+C:\Users\Riccardo\Documents\Visual Studio 2015\Projects\GUI\GUI\obj\Release\GUI.Esecuzione_calcolo.resources
+C:\Users\Riccardo\Documents\Visual Studio 2015\Projects\GUI\GUI\obj\Release\GUI.Form1.resources
+C:\Users\Riccardo\Documents\Visual Studio 2015\Projects\GUI\GUI\obj\Release\GUI.Properties.Resources.resources
+C:\Users\Riccardo\Documents\Visual Studio 2015\Projects\GUI\GUI\obj\Release\GUI.csproj.GenerateResource.Cache
+C:\Users\Riccardo\Documents\Visual Studio 2015\Projects\GUI\GUI\obj\Release\GUI.exe.manifest
+C:\Users\Riccardo\Documents\Visual Studio 2015\Projects\GUI\GUI\obj\Release\GUI.application
+C:\Users\Riccardo\Documents\Visual Studio 2015\Projects\GUI\GUI\obj\Release\GUI.exe
+C:\Users\Riccardo\Documents\Visual Studio 2015\Projects\GUI\GUI\obj\Release\GUI.pdb
